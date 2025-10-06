@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    /*)*/
+    background: linear-gradient(45deg, #0075be, white,red);
+    
+    max-height: 100vh;
+}
+
+ul {
+    list-style: none;
+    margin-left: 5px;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;   
+}
+
+ul li label{
+    border: 1px solid black;
+    border-top: none;
+    display: flex;
+    padding-left: 15px;
+    height: 70px;
+    margin: 3px;
+    border-radius: 5%;
+
+    background:radial-gradient(circle,white,red);
+    
+}
+
+.monsterList {
+    display: flex;
+}
+
+.monsterList input[type='radio']{
+    display: none;
+}
+
+.monsterList p{
+    text-align: center;
+    margin: auto;
+}
+
+.monsterList h2{
+    margin: auto;
+}
+
+.monsterList img{
+    width: 70px;
+    height: 70px;
+}
+
+ul li label:hover{
+    background: radial-gradient(circle,white, #fdc2ea , #b243f0);
+    border-radius: 5%;
+}
+
+input[type='radio']:checked + label{
+    background:radial-gradient(circle, rgb(255, 222, 0), rgb(59, 76, 202));
+}

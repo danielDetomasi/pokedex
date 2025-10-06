@@ -1,6 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 import MonsterList from './components/MonsterList';
+import './Styles.css';
 
 function App() {
   return (

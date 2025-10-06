@@ -32,13 +32,17 @@ const MonsterList = () => {
 
 
   return (
-    <div>
+    <div className='monsterList'>
         <ul>
             {firstGen.map(poke =>
                 <li key={poke.entry_number}>
-                        <p>{poke.entry_number}</p>
+                    <input type='radio' id={poke.entry_number} name='selection'/>
+                    <label for={poke.entry_number}>
+                        <h2>{poke.entry_number}</h2>
                         <img src={ShowMonsterImg(poke.entry_number)} alt="" />
-                        {ShowMonster(poke.entry_number)}
+                        <p>{ShowMonster(poke.entry_number)}</p> 
+                    </label>
+                               
                 </li>
             )}
 
