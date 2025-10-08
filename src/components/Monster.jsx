@@ -12,33 +12,21 @@ const Monster = ({int}) => {
 
   const ShowMonster = () =>{
     let img = '';
+    img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${monster.id}.png`;
     
-    if(monster != null){
-      img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${monster.id}.png`;
-    }
-      
     return img;
   }
 
-  const showTypes = () => {
-    let types = '';
-
-    for(let i = 0; i<monster.types.length; i++){
-      types += " " + monster.types[i].type.name;
-    }
-
-    return types;
-  }
   
   if(monster != null){
     return (
-      <div className='prueba'>
+      <div className='monsterInfo'>
         <img src={ShowMonster()} alt=''/>
         <p>{monster.name}</p>
         <ul>
           {monster.types.map(t => (
             <li key={t.type.name}>
-              <p>{t.type.name}</p>
+              <img key={t.type.name} src={`/type-icons/${t.type.name}.png`} alt="" />
             </li>
             ))}
         </ul>

@@ -5,8 +5,9 @@
 }
 
 .App{
-    /*)*/
-    background: linear-gradient(45deg, #0075be, white,red);
+
+    /* background: linear-gradient(45deg, #0075be, white,red); */
+    background-color: #F5F7FA;
     display: flex;
     max-height: 100vh;
     flex-direction: row;
@@ -14,24 +15,27 @@
     gap : 20px;
 }
 
-ul {
+ul{
     list-style: none;
     margin-left: 5px;
-    height: 100vh;
+    max-height: 100vh;
     overflow-y: auto;
     scrollbar-width: none;   
 }
 
 ul li label{
-    border: 1px solid black;
+    border: 2px solid black;
     border-top: none;
     display: flex;
     padding-left: 15px;
     height: 70px;
     margin: 3px;
     border-radius: 5%;
+    background-color: #FF6B6B;
+    color: #FFF;
+    transition: background-color 0.3s ease;
 
-    background:radial-gradient(circle,white,red);
+    /* background:radial-gradient(circle,white,red); */
     
 }
 
@@ -40,6 +44,7 @@ ul li label{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #1E1E2F;
 
 }
 
@@ -62,17 +67,18 @@ ul li label{
 }
 
 ul li label:hover{
-    background: radial-gradient(circle,white, #fdc2ea , #b243f0);
+    /* background: radial-gradient(circle,white, #fdc2ea , #b243f0); */
+    background-color: #FF4C4C;
     border-radius: 5%;
 }
 
 input[type='radio']:checked + label{
-    background:radial-gradient(circle, rgb(255, 222, 0), rgb(59, 76, 202));
+    /* background:radial-gradient(circle, rgb(255, 222, 0), rgb(59, 76, 202)); */
+    background-color: #4D96FF;
+    border-radius: 5%;
 }
 
-.prueba{
-   
-
+.monsterInfo{
     height: 100vh;
 }
 
