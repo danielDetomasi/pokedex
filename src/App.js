@@ -1,20 +1,27 @@
-import logo from './logo.svg';
-
 import MonsterList from './components/MonsterList';
-import './Styles.css';
 import Monster from './components/Monster';
+
 import { useState } from 'react';
+
+import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from './queryClient';
+
+import './Styles.css';
 
 function App() {
 
   const [selectID, setSelectID] = useState(null);
 
   return (
-    <div className="App">
-      <MonsterList onSelect={setSelectID}/>
+    <QueryClientProvider client={queryClient}>
 
-      <Monster int={selectID}/>
-    </div>
+      <div className="App">
+        <MonsterList onSelect={setSelectID}/>
+        <Monster int={selectID}/>
+      </div>
+
+    </QueryClientProvider>
+   
   );
 }
 

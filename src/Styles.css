@@ -31,9 +31,13 @@ ul li label{
     height: 70px;
     margin: 3px;
     border-radius: 5%;
-    background-color: #FF6B6B;
+    /* background-color: #FF6B6B; */
     color: #FFF;
     transition: background-color 0.3s ease;
+
+    /* background-image: url("https://cdn-0001.qstv.on.epicgames.com/lwKrDaGCfrdMZQGWiS/image/lobby.jpeg");
+    background-size: cover;
+    background-position: center; */
 
     /* background:radial-gradient(circle,white,red); */
     
@@ -81,5 +85,96 @@ input[type='radio']:checked + label{
 .monsterInfo{
     height: 100vh;
 }
+
+/* Normal */
+.normal {
+  background: linear-gradient(135deg, #A8A77A, #D1C3A3);
+}
+
+/* Fuego (Fire) */
+.fire {
+  background: linear-gradient(135deg, #EE8130, #F7B733);
+}
+
+/* Agua (Water) */
+.water {
+  background: linear-gradient(135deg, #6390F0, #30C5FF);
+}
+
+/* Planta (Grass) */
+.grass {
+  background: linear-gradient(135deg, #7AC74C, #A8E6CF);
+}
+
+/* Eléctrico (Electric) */
+.electric {
+  background: linear-gradient(135deg, #F7D02C, #FFEA70);
+}
+
+/* Hielo (Ice) */
+.ice {
+  background: linear-gradient(135deg, #96D9D6, #E0F7FA);
+}
+
+/* Lucha (Fighting) */
+.fight {
+  background: linear-gradient(135deg, #C22E28, #EF5350);
+}
+
+/* Veneno (Poison) */
+.poison {
+  background: linear-gradient(135deg, #A33EA1, #D291BC);
+}
+
+/* Tierra (Ground) */
+.ground {
+  background: linear-gradient(135deg, #E2BF65, #C2B280);
+}
+
+/* Volador (Flying) */
+.flying {
+  background: linear-gradient(135deg, #A98FF3, #C3B1E1);
+}
+
+/* Psíquico (Psychic) */
+.psychic {
+  background: linear-gradient(135deg, #F95587, #FFA6C9);
+}
+
+/* Bicho (Bug) */
+.bug {
+  background: linear-gradient(135deg, #A6B91A, #DCE775);
+}
+
+/* Roca (Rock) */
+.rock {
+  background: linear-gradient(135deg, #B6A136, #D7CCC8);
+}
+
+/* Fantasma (Ghost) */
+.ghost {
+  background: linear-gradient(135deg, #735797, #B39DDB);
+}
+
+/* Dragón (Dragon) */
+.dragon {
+  background: linear-gradient(135deg, #6F35FC, #A38CFF);
+}
+
+/* Siniestro (Dark) */
+.dark {
+  background: linear-gradient(135deg, #705746, #A1887F);
+}
+
+/* Acero (Steel) */
+.steel {
+  background: linear-gradient(135deg, #B7B7CE, #CFD8DC);
+}
+
+/* Hada (Fairy) */
+.fairy {
+  background: linear-gradient(135deg, #D685AD, #F8BBD0);
+}
+
 
 
