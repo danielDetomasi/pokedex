@@ -21,10 +21,8 @@ const MonsterList = ({onSelect}) => {
             {data.map(poke => {
                 const backgroundStyle = {
                 background: getTypeGradient(poke.types),
-                // padding: '1rem',
                 borderRadius: '1rem',
                 color: 'white',
-                // display: 'block',
                 };
 
                 return (
@@ -34,7 +32,7 @@ const MonsterList = ({onSelect}) => {
                     id={poke.id}
                     name='selection'
                     onChange={() => onSelect(poke.id)}
-                    style={{ display: 'none' }} // opcional: ocultar el input si querés solo el label visible
+                    style={{ display: 'none' }} 
                     />
                     <label htmlFor={poke.id} style={backgroundStyle}>
                     <h2>{poke.id}</h2>
@@ -48,22 +46,4 @@ const MonsterList = ({onSelect}) => {
         </div>
     )
 }
-export default MonsterList
-
-{/* <div className='monsterList'>
-            <ul>
-            {   data.map(poke =>
-                <li key={poke.id}>
-
-                    <input type='radio' id={poke.id} name='selection' onChange={() => onSelect(poke.id)}/>
-                    <label htmlFor={poke.id} className={poke.types[0].type.name}>
-                        <h2>{poke.id}</h2>
-                        <img src={poke.sprites.front_default} alt="" />
-                        {<p>{poke.name}</p>}
-                    </label>
-                               
-                </li>
-            )}
-
-            </ul>
-        </div> */}
+export default MonsterList;
