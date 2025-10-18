@@ -48,63 +48,46 @@ const Monster = ({int}) => {
       });
   }, [selected, allPokemon]);
 
-  console.log(flavorText)
-
   if (!selected) return <p>Seleccione un pokemon</p>;
   
   return (
     
       <div className='monsterInfo'>
         
-        <h1>{selected.id} {selected.name}</h1>
-        <img src={selected.sprites.front_default} alt="frontViewPokemon" />
-        <ul>
-          {selected.types.map(t => (
-            <li key={t.type.name}>
-              <img key={t.type.name} src={`/type-icons/${t.type.name}.png`} alt="" />
-            </li>
-            ))}
-        </ul>
-        <p>{(flavorText.flavor_text ?? '').replace(/[\f\n\r\t]+/g, ' ')}</p>
+        <h1 className='monsterName'>{selected.id} {selected.name}</h1>
+   
+        <div className='contentContainer'>
+          <div className='imgContainer'>
+                <img src={selected.sprites.front_default} alt="frontViewPokemon" className='monsterIMG'/>
+                <ul className='monsterTypes'>
+                  {selected.types.map(t => (
+                    <li key={t.type.name}>
+                      <img key={t.type.name} src={`/type-icons/${t.type.name}.png`} alt="" />
+                    </li>
+                    ))}
+                </ul>
+              </div>
+              
+              <p className='monsterDesc'>{(flavorText.flavor_text ?? '').replace(/[\f\n\r\t]+/g, ' ')}</p>
 
-        <ul>
-          {chainSprite.map(c => (
-            <li>
-              <img src={c} alt='fron_defualt'></img>
-            </li>
-          ))}
+              <ul className='evolutionChain'>
+                {chainSprite.map(c => (
+                  <li>
+                    <img src={c} alt='fron_defualt'></img>
+                  </li>
+                ))}
+                
+              </ul>
+              {<ul className='monsterMoves'>
+                {selected.moves.map(m =>(
+                  <li key={m.move.name}>{m.move.name}</li>
+                ))}
+                
+              </ul>}
+        </div>
           
-        </ul>
-        {/* <ul>
-          {selected.moves.map(m =>(
-            <li key={m.move.name}>{m.move.name}</li>
-          ))}
-          
-        </ul> */}
-
-        
-        
-
       </div>
   )
 }
 
 export default Monster;
-
-
-//   useEffect(() => {
-//   if (selected && selected.species?.url) {
-//     fetch(selected.species.url)
-//       .then(r => r.json())
-//       .then(data => {
-//         setFlavorText(data.flavor_text_entries[0]);
-
-//         if (data.evolution_chain?.url) {
-//           fetch(data.evolution_chain.url)
-//             .then(r => r.json())
-//             .then(chainData => setEvolution(chainData))
-//         }
-
-//       })
-//   }
-// }, [selected]);
