@@ -18,18 +18,29 @@ const Monster = ({int}) => {
   
   return (
     
-      <div>
+      <div className='monsterContainer'>
 
         <MonsterHeader id={selected.id} name={selected.name}/>
         
+        
+
         <div className='monsterInfo'>
-          <MonsterBasics monsterId={selected.id}/>
-          <MonsterStats monsterId={selected.id}/>
-          <MonsterMoves monsterId={selected.id}/>
-          <MonsterEvolutions monsterId={selected.id}/>
-          <MonsterFlavorText monsterId={selected.id}/>
+
+          <div className='infoLeft'>
+            <MonsterBasics monsterId={selected.id}/>
+            <MonsterStats monsterId={selected.id}/>
+          </div>
+          
+          <div className='infoCenter'>
+            <MonsterMoves monsterId={selected.id}/>
+            
+          </div>
+          
+          <div className='infoRigth'>
+            <MonsterFlavorText monsterId={selected.id}/>
+            <MonsterEvolutions monsterId={selected.id}/>
+          </div>
         </div>
-  
       </div>
   )
 }

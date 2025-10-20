@@ -16,19 +16,21 @@ const MonsterBasics = ({monsterId}) => {
                 <img src={selected.sprites.front_default} alt="frontViewPokemon" className='monsterSprite'/>
             </div>
         
-            <ul className='typeList'>
-                {selected.types.map(t => (
-                <li key={t.type.name}>
-                    <img key={t.type.name} src={`/type-icons/${t.type.name}.png`} alt={t.type.name} />
-                </li>
-                ))}
-            </ul>
+            <div className='basicInfo'>
+                <h4>Types:</h4>
+                <ul className='typeList'>
+                    {selected.types.map(t => (
+                    <li key={t.type.name}>
+                        <img key={t.type.name} src={`/type-icons/${t.type.name}.png`} alt={t.type.name} />
+                    </li>
+                    ))}
+                </ul>
 
-            <div className='measurments'>
-                <p>Height: {realHeight} m</p>
-                <p>Weight: {realWeight} kg</p>
-            </div>
-            
+                <div className='measurments'>
+                    <p>Height: {realHeight} m</p>
+                    <p>Weight: {realWeight} kg</p>
+                </div>
+            </div> 
         </div>
     )
 }
