@@ -8,7 +8,7 @@ const MonsterStats = ({monsterId}) => {
     const selected = allPokemon?.find(p => p.id === monsterId);
 
     return (
-        <div>
+        <div className='monster-stats'>
             <h3>Stats</h3>
             <ul>
                 {selected.stats.map(s => (

@@ -21,24 +21,21 @@ const Monster = ({int}) => {
       <div className='monsterContainer'>
 
         <MonsterHeader id={selected.id} name={selected.name}/>
-        
-        
-
+      
         <div className='monsterInfo'>
 
-          <div className='infoLeft'>
+          <div className='topSection'>
             <MonsterBasics monsterId={selected.id}/>
-            <MonsterStats monsterId={selected.id}/>
-          </div>
-          
-          <div className='infoCenter'>
-            <MonsterMoves monsterId={selected.id}/>
-            
-          </div>
-          
-          <div className='infoRigth'>
             <MonsterFlavorText monsterId={selected.id}/>
+          </div>
+          
+          <div className='bottomSection'>
+            <MonsterStats monsterId={selected.id}/>
             <MonsterEvolutions monsterId={selected.id}/>
+          </div>
+          
+          <div className='sideSection'>
+            <MonsterMoves monsterId={selected.id}/>
           </div>
         </div>
       </div>
