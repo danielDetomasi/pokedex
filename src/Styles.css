@@ -11,7 +11,8 @@
     flex-direction: row;
     align-items: stretch;
     gap : 20px;
-    overflow: hidden;
+    
+  
 }
 
 .monsterList ul{
@@ -23,7 +24,7 @@
     padding: 0;
 }
 
-ul li label{
+.monsterList ul li label{
     border: 2px solid black;
     border-top: none;
     display: flex;
@@ -33,6 +34,13 @@ ul li label{
     color: #FFF;
     width: 100%;
     padding-left: 8px;
+}
+
+.monsterList ul li label:hover{
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: 0.3s ease;
+  
 }
 
 .monsterList {
@@ -80,7 +88,8 @@ ul li label{
 
 .monsterId {
   font-size: 1rem;
-  color: #888;
+  /* color: #888; */
+  color: black;
   font-weight: 600;
 }
 
@@ -195,20 +204,19 @@ ul li label{
 /* monster moves */
 
 .monsterMoves {
-  width: 250px;
-  max-height: 400px;
+  width: 300px;
+  max-height: 600px;
   overflow-y: auto;
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
   background: #f9f9f9;
-}
-
-.monsterMoves ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  
+  scrollbar-width: none;
+  overflow-y: auto;
+  text-align: center;
 }
 
 .monsterMoves li {
@@ -253,7 +261,7 @@ ul li label{
   height: 96px;
   object-fit: contain;
   border-radius: 8px;
-  border: 2px solid #ccc;
+  border: 3px solid #ccc;
   background-color: #f9f9f9;
   margin-bottom: 0.5rem;
 }
@@ -269,7 +277,7 @@ ul li label{
   line-height: 1.5;
   background-color: #fafafa;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
   height: 100px;
 }
 
@@ -288,31 +296,51 @@ ul li label{
   min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box;
+
 }
 
 .topSection,
 .bottomSection {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* dos columnas internas */
-  justify-items: center;          /* centra horizontalmente */
-  align-items: center;            /* centra verticalmente */
+  grid-template-columns: 1fr 1fr; 
+  justify-items: center;          
+  align-items: center;            
   gap: 20px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 10px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   padding: 1rem;
+  background-color: #F5F7FA;
+  /* background: rgba(255, 255, 255, 0.12);
+  
+  ;
+  border-radius: 16px;
+   */
+  
 }
 
-/* 🔹 derecha (movimientos) */
+
 .sideSection {
-  grid-row: 1 / span 2;  /* ocupa la altura total de ambas secciones */
+  grid-row: 1 / span 2;  
   grid-column: 2 / 3;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 10px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   padding: 1rem;
-}
+  background-color: #F5F7FA;
+  /* background: rgba(255, 255, 255, 0.12);
+  
+  
+  border-radius: 16px;
+  */
+} 
 
 
 

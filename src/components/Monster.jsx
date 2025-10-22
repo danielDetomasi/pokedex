@@ -7,6 +7,7 @@ import MonsterBasics from './MonsterBasics';
 import MonsterStats from './MonsterStats';
 import MonsterEvolutions from './MonsterEvolutions';
 import MonsterFlavorText from './MonsterFlavorText';
+import { getTypeGradientPastel } from '../utils/getTypeGradientPastel';
 
 const Monster = ({int}) => {
 
@@ -14,7 +15,12 @@ const Monster = ({int}) => {
   const allPokemon = queryClient.getQueryData(['firstGen']);
   const selected = allPokemon?.find(p => p.id === int);
 
+  // const primaryType = selected.types?.[0].type.name;
+  // const bgColor = pastelPokemonTypes[primaryType] || "#D3D3D3";
+
   if (!selected) return <p>Seleccione un pokemon</p>;
+
+  const backgroundStyle = getTypeGradientPastel(selected.types)
   
   return (
     
@@ -24,17 +30,17 @@ const Monster = ({int}) => {
       
         <div className='monsterInfo'>
 
-          <div className='topSection'>
+          <div className='topSection' style={{background: backgroundStyle}}>
             <MonsterBasics monsterId={selected.id}/>
             <MonsterFlavorText monsterId={selected.id}/>
           </div>
           
-          <div className='bottomSection'>
+          <div className='bottomSection' style={{background: backgroundStyle}}>
             <MonsterStats monsterId={selected.id}/>
             <MonsterEvolutions monsterId={selected.id}/>
           </div>
           
-          <div className='sideSection'>
+          <div className='sideSection' style={{background: backgroundStyle}}>
             <MonsterMoves monsterId={selected.id}/>
           </div>
         </div>

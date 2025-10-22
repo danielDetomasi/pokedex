@@ -1,0 +1,20 @@
+export const pastelPokemonTypes = {
+  normal: "#D3D3D3",
+  fire: "#FFB380",
+  water: "#A3D8FF",
+  grass: "#B8F2B8",
+  electric: "#FFF9B0",
+  ice: "#D0F0FF",
+  fighting: "#FFB6C1",
+  poison: "#D8B8FF",
+  ground: "#E6C9A8",
+  flying: "#C6E0FF",
+  psychic: "#E8C8FF",
+  bug: "#C6E8B8",
+  rock: "#E6D8B8",
+  ghost: "#D8C6FF",
+  dragon: "#B8C6FF",
+  dark: "#A8A8A8",
+  steel: "#B0C6D8",
+  fairy: "#FFD8E8"
+};
