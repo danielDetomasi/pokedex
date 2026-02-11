@@ -3,7 +3,9 @@ export const fetchFirstGen = async () => {
     const data = await res.json();
 
     const detailed = data.pokemon_entries.map(entry => 
-        fetch(`https://pokeapi.co/api/v2/pokemon/${entry.pokemon_species.name}`)
+        // fetch(`https://pokeapi.co/api/v2/pokemon/${entry.pokemon_species.name}`)
+        // .then(res => res.json())
+        fetch(`https://pokeapi.co/api/v2/pokemon/${entry.entry_number}`)
         .then(res => res.json())
     );
 

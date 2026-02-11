@@ -9,11 +9,11 @@ import MonsterEvolutions from './MonsterEvolutions';
 import MonsterFlavorText from './MonsterFlavorText';
 import { getTypeGradientPastel } from '../utils/getTypeGradientPastel';
 
-const Monster = ({int}) => {
+const Monster = ({id}) => {
 
   const queryClient =  useQueryClient();
   const allPokemon = queryClient.getQueryData(['firstGen']);
-  const selected = allPokemon?.find(p => p.id === int);
+  const selected = allPokemon?.find(p => p.id === id);
 
   // const primaryType = selected.types?.[0].type.name;
   // const bgColor = pastelPokemonTypes[primaryType] || "#D3D3D3";
